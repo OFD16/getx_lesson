@@ -9,4 +9,9 @@ This project result of the Flutter Getx Basics lesson: https://www.youtube.com/w
 You can reach full code of the yt lesson with https://github.com/themaaz32/getx_impl
 
 
+## What Includes?
+-  RouteManager, 
+-  Dependency Manager
+-  State Manager
+-  Dialog & Snacbar Utils
 
