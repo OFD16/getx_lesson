@@ -1,0 +1,8 @@
+./build
+/.dart_tool/build
+/.dart_tool/build_resolvers
+/.dart_tool
+/build
+/android/.gradle
+
+*.env

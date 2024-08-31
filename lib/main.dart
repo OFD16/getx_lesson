@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:getx_lesson/pages/detail/binding/detail_binding.dart';
-import 'package:getx_lesson/pages/home/binding/home_binding.dart';
-import 'package:getx_lesson/pages/home/view/home.dart';
 import 'package:get/get.dart';
+import 'package:getx_lesson/pages/news_headline/binding/news_headline_binding.dart';
+import 'package:getx_lesson/pages/news_headline/view/news_headline_view.dart';
+import 'package:getx_lesson/pages/search_news/view/search_news_view.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-import 'pages/detail/view/detail.dart';
+import 'pages/search_news/binding/search_news_binding.dart';
 
-void main() {
+Future main() async {
+  await dotenv.load(fileName: ".env");
   runApp(MyApp());
 }
 
@@ -22,12 +24,13 @@ class MyApp extends StatelessWidget {
       ),
       getPages: [
         GetPage(
-            name: "/home", page: () => HomeScreen(), binding: HomeBinding()),
+            name: "/home",
+            page: () => NewsHeadlineView(),
+            binding: NewsHeadlineBinding()),
         GetPage(
-          name: "/detail",
-          page: () => DetailScreen(),
-          binding: DetailBinding(),
-        ),
+            name: "/search",
+            page: () => SearchNewsView(),
+            binding: SearchNewsBinding()),
       ],
       initialRoute: "/home",
     );
